@@ -102,6 +102,19 @@ app.delete('/CRUD/delete/:id', async(req,res)=>{
 })
 
 
+//get data
+app.get('/CRUD/get', async(req,res)=>{
+  try{
+   const data = await sigupData.find()
+   res.status(200).json({message:'Data fecth success',user:data})
+  }
+  catch(error){
+    res.status(500).json({message:'server Error',error: error.message});
+  }
+})
+
+
+
 app.listen(3000, ()=>{
     console.log("port running successfull");
 })

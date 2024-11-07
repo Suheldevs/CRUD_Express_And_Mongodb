@@ -1,0 +1,37 @@
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+    display: flex;
+}
+.slider{
+    width:20%;
+    background-color: black;
+    color: white;
+}
+.slider h2{
+    padding: 20px;
+}
+.slider ul{
+    list-style: none;
+}
+.slider ul li{
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px;
+
+
+}
+.slider ul li:hover{
+    background-color: rgb(49, 49, 49);
+    cursor: pointer;
+}
+.main-content{
+    width: 80%;
+}
+.main-content header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(251, 226, 226);
+}

@@ -76,70 +76,74 @@ function Dashboard() {
 
         }
     }
-        return (
+    return (
+        <div>
             <div>
-
                 <div className='h1'>Dashboard</div>
                 <div className='text-center h2 bg-danger text-light'>WElcome! {user._id}</div>
-                <Button variant="primary"  className='ms-4' onClick={handleEditClick}>
+                <Button variant="primary" className='ms-4' onClick={handleEditClick}>
                     Edit
                 </Button>
                 <Button variant="primary" className='ms-4' onClick={handleDeleteClick}>
                     Delete
                 </Button>
-
-
-
-                {/* modal */}
-                <Modal show={showModal} onHide={handleCloseModal}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Edit Information</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="formName">
-                                <Form.Label>Name</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    name="name"
-                                    value={editData.name}
-                                    onChange={handleChange}
-                                    placeholder="Enter name"
-                                />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control
-                                    type="email"
-                                    name="email"
-                                    value={editData.email}
-                                    onChange={handleChange}
-                                    placeholder="Enter email"
-                                />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formEmail">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control
-                                    type="password"
-                                    name="password"
-                                    value={editData.password}
-                                    onChange={handleChange}
-                                    placeholder="Enter password"
-                                />
-                            </Form.Group>
-                        </Form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleCloseModal}>
-                            Cancel
-                        </Button>
-                        <Button variant="primary" onClick={handleSaveChanges}>
-                            Save Changes
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
             </div>
-        )
-    }
 
-    export default Dashboard
+
+            {/* modal */}
+            <Modal show={showModal} onHide={handleCloseModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Edit Information</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group className="mb-3" controlId="formName">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="name"
+                                value={editData.name}
+                                onChange={handleChange}
+                                placeholder="Enter name"
+                            />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formEmail">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                type="email"
+                                name="email"
+                                value={editData.email}
+                                onChange={handleChange}
+                                placeholder="Enter email"
+                            />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formEmail">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                name="password"
+                                value={editData.password}
+                                onChange={handleChange}
+                                placeholder="Enter password"
+                            />
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseModal}>
+                        Cancel
+                    </Button>
+                    <Button variant="primary" onClick={handleSaveChanges}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+
+
+            
+        </div>
+    )
+}
+
+export default Dashboard
